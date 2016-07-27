@@ -45,20 +45,7 @@ module.exports = {
       loader: "url-loader?limit=8192"
     }, {
       test: /\.svg$/,
-      loader: "url?limit=10000&mimetype=image/svg+xml",
-      include: path.join(__dirname, "assets")
-    }, {
-      test: /\.png$/,
-      loader: "url-loader?mimetype=image/png",
-      include: path.join(__dirname, "assets")
-    }, {
-      test: /\.gif$/,
-      loader: "url-loader?mimetype=image/gif",
-      include: path.join(__dirname, "assets")
-    }, {
-      test: /\.jpg$/,
-      loader: "url-loader?mimetype=image/jpg",
-      include: path.join(__dirname, "assets")
+      loader: "url?limit=10000&mimetype=image/svg+xml"
     },  { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=dist/fonts/[name].[ext]' },
         { test: /\.woff$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=dist/fonts/[name].[ext]' },
         { test: /\.woff2$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=dist/fonts/[name].[ext]' },
