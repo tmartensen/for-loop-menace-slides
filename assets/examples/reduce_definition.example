@@ -1,0 +1,11 @@
+// index, array, and initialValue are all optional
+
+// ES5
+array.reduce(function(accumulator, element, index, array) {
+      ...
+}, initialValue);
+
+//ES6
+array.reduce((accumulator, element, index, array) => {
+      ...
+}, initialValue);

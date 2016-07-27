@@ -1,0 +1,11 @@
+// index array, and thisArg are optional
+
+// ES5
+array.filter(function(elem, index, array) {
+      ...
+}, thisArg);
+
+//ES6
+array.map((element, index, array) => {
+      ...
+}, thisArg)

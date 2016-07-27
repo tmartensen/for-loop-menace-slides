@@ -1,0 +1,9 @@
+var array = [];
+
+var activeArray = [];
+
+for(var i = 0; i < array.length; i++) {
+    if(array[i].active) === true) {
+        activeArray.push(array[i]);
+    }
+}
