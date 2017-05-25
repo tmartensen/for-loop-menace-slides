@@ -6,6 +6,6 @@ array.filter(function(elem, index, array) {
 }, thisArg);
 
 //ES6
-array.map((element, index, array) => {
+array.filter((element, index, array) => {
       ...
 }, thisArg)
