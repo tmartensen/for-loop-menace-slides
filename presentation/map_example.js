@@ -28,25 +28,23 @@ export default class MapExample extends Component {
 
   mapDroidsFilms(droids) {
     return droids.map(droid => {
-      let droidsFilms = droid.films.map(filmUrl => {
-        return films.filter(film => film.url === filmUrl)[0].title;
-      });
-
-      return {
-        droidName: droid.name,
-        films: droidsFilms
-      };
+      const droidsFilms = droid.films.map(filmUrl => films.filter(film => film.url === filmUrl)[0].title);
+      return {droidName: droid.name, films: droidsFilms};
     });
   }
 
   render() {
     console.log(JSON.stringify(this.state.mappedDroids, null, 2));
-    const mappedDroids = this.state.mappedDroids ? (<div>{JSON.stringify(this.state.mappedDroids, null, 2)}</div>) : null;
+    const mappedDroids = this.state.mappedDroids || [];
 
     return (
-      <div>
+      <div style={{paddingBottom: "10px"}}>
         <button style={buttonStyles} onClick={this.handleClick}>Filter and Map Droids</button>
-        <div style={{marginTop: "20px"}}>{mappedDroids}</div>
+        <div style={{marginTop: "20px"}}>
+          {mappedDroids.map(droid => (
+            <div>{droid.droidName} : {droid.films.join(", ")}</div>
+        ))}
+        </div>
       </div>
     )
   }

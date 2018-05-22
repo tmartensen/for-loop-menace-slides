@@ -26,7 +26,7 @@ export default class FilterExample extends Component {
     const fastShips = this.state.fastShips ? this.state.fastShips.map(ship => (
       <Text textColor="tertiary">{ship.name}</Text>)) : null;
     return (
-      <div>
+      <div style={{paddingBottom: "10px"}}>
         <button style={buttonStyles} onClick={this.handleClick}>Filter Fast Ships</button>
         {fastShips}
       </div>
