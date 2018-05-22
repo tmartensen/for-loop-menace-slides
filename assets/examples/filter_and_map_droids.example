@@ -1,0 +1,27 @@
+// droids are people, too
+const people = require("swapi/people.json");
+const films = require("swapi/films.json");
+
+export const getById = url => {
+  const urlSplit = url.split("/");
+  return urlSplit[urlSplit.length - 2];
+};
+
+export const filterDroids = () => {
+  return people.filter(person => {
+    const speciesUrl = person.species[0];
+    return (speciesUrl !== undefined && getById(speciesUrl) === "2");
+  });
+}
+
+export const mapDroidsFilms = droids => {
+    return droids.map(droid => {
+      const droidsFilms = droid.films.map(filmUrl => films.filter(film => film.url === filmUrl)[0].title);
+      return { droidName: droid.name, films: droidsFilms };
+    });
+  }
+}
+
+const mappedFilteredDroids = mapDroidsFilms(filterDroids);
+
+

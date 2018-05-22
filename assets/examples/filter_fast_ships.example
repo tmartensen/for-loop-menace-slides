@@ -1,0 +1,5 @@
+// from https://swapi.co/api/starships/
+const starships = require("swapi/starships.json");
+
+// MGLT = Modern Galactic Light Time - unit of speed
+starships.filter(ship => ship.MGLT !== "unknown" && ship.MGLT >= 75);

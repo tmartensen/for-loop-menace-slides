@@ -29,7 +29,7 @@ export default class ReduceExample extends Component {
   render() {
     const totalPopulation = this.state.totalPopulation ? (<Text textColor="tertiary">Total population of all the planets: { this.state.totalPopulation.toFormat()}</Text>) : null;
     return (
-      <div>
+      <div style={{paddingBottom: "10px"}}>
         <button style={buttonStyles} onClick={this.handleClick}>Get Total Population</button>
         {totalPopulation}
       </div>

@@ -1,0 +1,13 @@
+const planets = require("swapi/planets.json");
+// for adding big numbers :)
+import BigNumber from "bignumber.js";
+
+
+const getTotalPopulation = () => {
+  return planets.reduce((total, planet) => {
+    const bigNumToAdd = (planet.population && planet.population !== "unknown")
+      ? new BigNumber(planet.population)
+      : new BigNumber(0);
+    return total.plus(bigNumToAdd);
+  }, new BigNumber(0));
+}

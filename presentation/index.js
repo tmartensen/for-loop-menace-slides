@@ -64,9 +64,7 @@ const images = {
   fancyJabbaFett: require("../assets/images/fancy-jabba-fett.jpg"),
   atat: require("../assets/images/rebel-at-at.jpg"),
   sniper: require("../assets/images/rebel-sniper.jpg"),
-  forceUnleashed: require("../assets/images/force-unleashed.jpg"),
-  slideBg: require("../assets/opi-slide.jpg"),
-  opiLogo: require("../assets/2015 OP_Logo.svg")
+  forceUnleashed: require("../assets/images/force-unleashed.jpg")
 };
 
 preloader(images);
@@ -218,6 +216,11 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide bgImage={images.milleniumFalcon.replace("/", "")} bgDarken={0.75}>
             <FilterExample/>
+            <CodePane
+              margin="0px 0px 20px 0px"
+              lang="js"
+              source={require("raw!../assets/examples/filter_fast_ships.example")}
+            />
           </Slide>
           <Slide transition={["slide"]} bgImage={images.galaxyMap.replace("/", "")} bgDarken={0.75}>
             <Heading size={4} textColor="secondary" textFont="primary" lineHeight={2}>
@@ -261,10 +264,23 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
           <Slide transition={["slide"]} bgImage={images.r2d2.replace("/", "")} bgDarken={0.60}>
-            <MapExample />
+            <Heading size={4} textColor="secondary" textFont="primary" lineHeight={1}>Example</Heading>
+            <CodePane
+              margin="0px 0px 20px 0px"
+              lang="js"
+              source={require("raw!../assets/examples/droid_structure.example")}
+            />
+          </Slide>
+          <Slide transition={["slide"]} bgImage={images.r2d2.replace("/", "")} bgDarken={0.60}>
+            <MapExample/>
+            <CodePane
+              margin="0px 0px 20px 0px"
+              lang="js"
+              source={require("raw!../assets/examples/filter_and_map_droids.example")}
+            />
           </Slide>
           <Slide bgImage={images.vaderRain.replace("/", "")} bgDarken={0.75}>
-            <Heading size={4} textColor="secondary" textFont="primary" lineHeight={2}>
+            <Heading size={2} textColor="secondary" textFont="primary" lineHeight={2}>
               Array.reduce()
             </Heading>
             <Appear><ListItem>Used to find a new value computed by iterating over the array</ListItem></Appear>
@@ -309,7 +325,12 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
           <Slide bgImage={images.deathStar.replace("/", "")} bgDarken={0.30}>
-            <ReduceExample />
+            <ReduceExample/>
+            <CodePane
+              margin="0px 0px 20px 0px"
+              lang="js"
+              source={require("raw!../assets/examples/reduce_total_population.example")}
+            />
           </Slide>
           <Slide transition={["slide"]} bgImage={images.atat.replace("/", "")} bgDarken={0.75}>
             <Heading caps fit size={2} textColor="secondary" textFont="secondary" lineHeight={2}>
@@ -360,11 +381,11 @@ export default class Presentation extends React.Component {
             <Heading size={4} textColor="secondary" textFont="primary" lineHeight={2}>
               Where can I use array extras?
             </Heading>
-              <ListItem>Chrome 8+</ListItem>
-              <ListItem>Firefox 3.6+</ListItem>
-              <ListItem>Internet Explorer 9+</ListItem>
-              <ListItem>Opera 11+</ListItem>
-              <ListItem>Safari 5+</ListItem>
+            <ListItem>Chrome 8+</ListItem>
+            <ListItem>Firefox 3.6+</ListItem>
+            <ListItem>Internet Explorer 9+</ListItem>
+            <ListItem>Opera 11+</ListItem>
+            <ListItem>Safari 5+</ListItem>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" bgImage={images.stars.replace("/", "")}>
             <Heading caps fit size={2} textColor="secondary" textFont="secondary">
@@ -377,8 +398,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
         </Deck>
-        <
-        / Spectacle >
-        );
-        }
-        }
+      </Spectacle>
+    );
+  }
+}
