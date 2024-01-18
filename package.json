@@ -21,7 +21,7 @@
     "react-dom": "^0.14.3",
     "serve-favicon": "^2.3.0",
     "serve-static": "^1.11.1",
-    "spectacle": "^1.0.0"
+    "spectacle": "^10.1.7"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
@@ -36,7 +36,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.0",
-    "eslint": "^1.8.0",
+    "eslint": "^8.56.0",
     "eslint-config-defaults": "^7.1.1",
     "eslint-plugin-filenames": "^0.1.2",
     "eslint-plugin-react": "^3.6.3",
