@@ -96,8 +96,6 @@ export default class Presentation extends React.Component {
             </Heading>
             <Text textSize="0.9em" margin="20px 0px 0px" bold textColor="tertiary">Travis Martensen (<Link
               textColor="tertiary" href="http://twitter.com/tmartensen">@tmartensen</Link>)</Text>
-            <Text textSize="0.9em" margin="0px 0px 0px" bold textColor="tertiary">Principal Consultant</Text>
-            <Text textSize="0.9em" margin="0px 0px 0px" bold textColor="tertiary">Object Partners, Inc.</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" bgImage={images.stars.replace("/", "")}>
             <Text textColor="tertiary">A long, long time ago, in a working group far, far, away...</Text>
